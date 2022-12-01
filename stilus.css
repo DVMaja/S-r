@@ -131,6 +131,7 @@ td, th {
     .kep {
         width: 100%;
         clear: both;
+        text-align: center;
     }
     article {
         grid-template-columns: 1fr;
@@ -139,8 +140,7 @@ td, th {
             " s ";
     }
     article ul {
-        padding-left: 20px;      
-        
+        padding-left: 20px;              
     }
 }
 
@@ -148,6 +148,7 @@ td, th {
     .kep {
         width: 100%;
         clear: both;
+        
     }
     article ul {
         padding-left: 20px;      
