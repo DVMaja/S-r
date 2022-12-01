@@ -33,7 +33,7 @@ header {
 
 header h1 {
     font-family: Garamond;
-    
+
     text-align: left;
     letter-spacing: 4px;
     font-weight: bold;
@@ -46,22 +46,26 @@ article {
     background-color: black;
     /*display: grid;
     grid-template-columns: 1fr 1fr;  */
-    text-align: justify; 
+    text-align: justify;
     font-size: 15px;
     padding: 5px;
 }
+
 section {
     grid-area: s;
 }
+
 .kep {
     float: left;
     padding-right: 20px;
 
 }
+
 article ul {
     list-style-type: square;
     padding-left: 320px;
 }
+
 article h2 {
     font-size: 20px;
 }
@@ -71,12 +75,14 @@ nav {
     grid-area: n;
     background-color: rgb(51, 51, 50);
 }
-nav ul {    
-    list-style-type: none;    
+
+nav ul {
+    list-style-type: none;
     padding-left: 0;
     padding: 10px;
-    
+
 }
+
 nav li {
     border: 1px solid white;
     border-radius: 15%;
@@ -84,13 +90,15 @@ nav li {
     padding: 5px;
     text-align: left;
 }
+
 nav a {
     text-decoration: none;
     color: red;
     font-weight: bold;
-    
-    
+
+
 }
+
 a:hover {
     background-color: rgb(177, 174, 174);
     color: white;
@@ -116,13 +124,15 @@ table {
     width: 100%;
     border-collapse: collapse;
 }
-td, th {
+
+td,
+th {
     border: 1px solid lightgray;
     text-align: center;
     font-size: 10px;
 }
 
- tbody tr:nth-child(odd){
+tbody tr:nth-child(odd) {
     background-color: rgb(94, 91, 91);
 }
 
@@ -133,14 +143,16 @@ td, th {
         clear: both;
         text-align: center;
     }
+
     article {
         grid-template-columns: 1fr;
         grid-template-areas:
             " s "
             " s ";
     }
+
     article ul {
-        padding-left: 20px;              
+        padding-left: 20px;
     }
 }
 
@@ -148,12 +160,14 @@ td, th {
     .kep {
         width: 100%;
         clear: both;
-        
+
     }
+
     article ul {
-        padding-left: 20px;      
-        
+        padding-left: 20px;
+
     }
+
     main {
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -162,15 +176,17 @@ td, th {
             " a "
             " f ";
     }
-  }
-  @media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 600px) {
     .kep {
         clear: both;
     }
+
     article {
         grid-template-columns: 1fr;
         grid-template-areas:
             " s "
             " s ";
     }
-  }
+}
