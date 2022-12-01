@@ -4,55 +4,172 @@
     color: beige;
     margin: 0;
 }
-body{
+
+body {
     background-image: url(design/teglafal.jpg);
 }
-main{   
+
+main {
     width: 80%;
     max-width: 1000px;
     margin: auto;
     background-color: #333333;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-                        " h h h "
-                        " a a n "
-                        " f f f";
+    grid-template-areas:
+        " h h h "
+        " a a n "
+        " f f f";
 }
-header{
+
+header {
     grid-area: h;
     background-image: url(design/beer-new_401732638.jpg);
+    background-size: cover;
     height: 300px;
-    font-size: 30px;
-    letter-spacing: 3px;   
-    
+    font-size: 32px;
+
 }
-header h1{
-    font-family: 'Times New Roman', Times, serif;
+
+header h1 {
+    font-family: Garamond;
     
+    text-align: left;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: 30px;
 }
-article{
+
+article {
     grid-area: a;
-    background-color: black;    
+    background-color: black;
+    /*display: grid;
+    grid-template-columns: 1fr 1fr;  */
+    text-align: justify; 
+    font-size: 15px;
+    padding: 5px;
 }
-nav{
+section {
+    grid-area: s;
+}
+.kep {
+    float: left;
+    padding-right: 20px;
+
+}
+article ul {
+    list-style-type: square;
+    padding-left: 320px;
+}
+article h2 {
+    font-size: 20px;
+}
+
+/*MENÜ*/
+nav {
     grid-area: n;
     background-color: rgb(51, 51, 50);
+}
+nav ul {    
+    list-style-type: none;    
+    padding-left: 0;
+    padding: 10px;
     
 }
-footer{
+nav li {
+    border: 1px solid white;
+    border-radius: 15%;
+    width: 100%;
+    padding: 5px;
+    text-align: left;
+}
+nav a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    
+    
+}
+a:hover {
+    background-color: rgb(177, 174, 174);
+    color: white;
+
+}
+
+
+/*LÁBJEGYZET*/
+footer {
     grid-area: f;
     background-color: rgb(169, 169, 167);
     height: calc(5px + 3vh);
-    text-align: center;   
+    text-align: center;
 }
-footer p{
+
+footer p {
     font-size: 15px;
 }
-p{
+
+
+/*TÁBLÁZAT*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid lightgray;
+    text-align: center;
     font-size: 10px;
 }
 
-table {
-    width: 100%;
+ tbody tr:nth-child(odd){
+    background-color: rgb(94, 91, 91);
 }
+
+/*RESPONZIVITÁS*/
+@media screen and (max-width: 900px) {
+    .kep {
+        width: 100%;
+        clear: both;
+    }
+    article {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            " s "
+            " s ";
+    }
+    article ul {
+        padding-left: 20px;      
+        
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .kep {
+        width: 100%;
+        clear: both;
+    }
+    article ul {
+        padding-left: 20px;      
+        
+    }
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            " h  "
+            " n "
+            " a "
+            " f ";
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .kep {
+        clear: both;
+    }
+    article {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            " s "
+            " s ";
+    }
+  }
